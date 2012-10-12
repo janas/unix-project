@@ -1,0 +1,30 @@
+Installation Instructions
+*************************
+
+Copyright (C) 2012 Piotr Janaszek
+
+Basic Installation
+==================
+
+   Briefly, the shell command `make' should build this package. 
+The following more-detailed instructions are generic; see the `README'
+file for description of this package.
+
+
+The simplest way to compile this package is:
+
+  1. `cd' to the directory containing the package's source code
+
+  2. Type `make' to compile the package.
+
+  3. Optionally, type `make debug' to compile the packages with debug
+     symobls. This is useful when you are going to use debug programs
+     such as gdb.
+
+  4. If you have Doxygen installed type `doxygen' to generate a 
+     documentation of the program in HTML and LaTeX form under docs/ 
+     directory.
+
+  5. You can remove the program binaries and object files from the
+     source code directory by typing `make clean'.
+

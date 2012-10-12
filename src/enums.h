@@ -1,0 +1,87 @@
+/**
+ * @file enums.h
+ * @ingroup enums
+ *
+ * @author Piotr Janaszek <janas03@yahoo.pl>
+ * @date Created on: Jul 6, 2012
+ *
+ * @brief File containing enumeration constants.
+ */
+
+#ifndef ENUMS_H_
+#define ENUMS_H_
+
+/**
+ * The enumeration of player mode.
+ */
+typedef enum {
+	PLAYER_MODE_START = 0,
+	PLAYER_MODE_LOGGED_IN,
+	PLAYER_MODE_CONNECTED,
+	PLAYER_MODE_SPECTATOR
+} player_mode_e;
+
+/**
+ * The enumeration of message types.
+ */
+typedef enum {
+	MSG_LEAVE_REQ = 0,
+	MSG_LEAVE_RSP,
+	MSG_LOGIN_REQ,
+	MSG_LOGIN_RSP,
+	MSG_LOGOUT_REQ,
+	MSG_LOGOUT_RSP,
+	MSG_PLAYERS_LIST_REQ,
+	MSG_PLAYERS_LIST_RSP,
+	MSG_GAMES_LIST_REQ,
+	MSG_GAMES_LIST_RSP,
+	MSG_CREATE_GAME_REQ,
+	MSG_CREATE_GAME_RSP,
+	MSG_CONNECT_GAME_REQ,
+	MSG_CONNECT_GAME_RSP,
+	MSG_CONNECT_SPECTATOR_REQ,
+	MSG_CONNECT_SPECTATOR_RSP,
+	MSG_PRINT_BOARD_REQ,
+	MSG_PRINT_BOARD_RSP,
+	MSG_CHECK_TURN_REQ,
+	MSG_CHECK_TURN_RSP,
+	MSG_MAKE_MOVE_REQ,
+	MSG_MAKE_MOVE_RSP,
+	MSG_LEAVE_MESSAGE_REQ,
+	MSG_LEAVE_MESSAGE_RSP,
+	MSG_BACK_TO_MENU_REQ,
+	MSG_BACK_TO_MENU_RSP,
+	MSG_PRINT_BOARD_SPC_RSP,
+	MSG_PRINT_RESULT_SPC_RSP,
+	MSG_PRINT_WIN_RSP,
+	MSG_PRINT_LOST_RSP,
+	MSG_PRINT_DRAW_RSP,
+	MSG_CLEANUP_RSP
+} message_type_e;
+
+/**
+ * The enumeration of message errors.
+ */
+typedef enum {
+	MSG_RSP_ERROR_NONE = 0,
+	MSG_RSP_INTERNAL_SERVER_ERROR,
+	MSG_RSP_ERROR_NICK_EXISTS,
+	MSG_RSP_ERROR_WRONG_BORAD_SIZE,
+	MSG_RSP_ERROR_WRONG_GAME_ID,
+	MSG_RSP_ERROR_TOO_MANY_PLAYERS,
+	MSG_RSP_ERROR_TOO_MANY_SPECTATORS,
+	MSG_RSP_ERROR_WRONG_TURN,
+	MSG_RSP_ERROR_WRONG_MOVE,
+	MSG_RSP_ERROR_WAIT_OPPONENT
+} message_error_e;
+
+/**
+ * The enumeration of a game state.
+ */
+typedef enum {
+	GAME_STATE_WAITING = 0,
+	GAME_STATE_STARTED,
+	GAME_STATE_RESOLVED
+} game_state_e;
+
+#endif /* ENUMS_H_ */
